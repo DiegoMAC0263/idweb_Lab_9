@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+}
+
+.landing-grid {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "hero"
+        "main"
+        "footer";
+    grid-template-rows: auto 350px 1fr auto;
+    min-height: 100vh;
+    gap: 30px;
+}
+
+header {
+    grid-area: header;
+    background: #007bff;
+    color: white;
+    padding: 32px 0;
+    margin: 20px 40px 0 40px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.hero {
+    grid-area: hero;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    margin: 0 40px;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 40px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.hero-content h2 {
+    margin: 0;
+    font-size: 2.2em;
+    color: #333;
+}
+
+.hero-content button {
+    padding: 12px 32px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    transition: background 0.2s;
+}
+
+.hero-content button:hover {
+    background: #0056b3;
+}
+
+main {
+    grid-area: main;
+    background: #fff;
+    margin: 0 40px;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+main h3 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+footer {
+    grid-area: footer;
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 24px 0;
+    margin: 0 40px 20px 40px;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 700px) {
+    .landing-grid {
+        gap: 16px;
+    }
+    header, .hero, main, footer {
+        margin: 0 8px;
+        border-radius: 8px;
+        padding: 16px;
+    }
+    .hero {
+        padding: 16px;
+    }
+    main {
+        padding: 16px;
+    }
+    footer {
+        padding: 12px 0;
+    }
+}
